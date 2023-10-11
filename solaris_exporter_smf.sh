@@ -1,12 +1,12 @@
 #!/bin/bash
 
 run_binary="solaris_exporter.py"
-service_user="monitor"
-service_group="monitor"
+service_user="root"
+service_group="root"
 
 os=$(uname -r)
 if [[ "$os" == "5.11" ]]; then
-    python="/usr/bin/python2.7"
+    python="/usr/bin/python3.7"
 elif  [[ "$os" == "5.10" ]]; then
     python="/opt/csw/bin/python2.7"
 else

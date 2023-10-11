@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-user=monitor
+user=root
 profile_name=Prometheus
 
 uid0_commands="
