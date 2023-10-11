@@ -1,0 +1,25 @@
+ # A scrape configuration containing exactly one endpoint to scrape from node_exporter running on a host:
+scrape_configs:
+     # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'node'
+
+  # metrics_path defaults to '/metrics'
+  # scheme defaults to 'http'.
+
+    static_configs:
+      - targets:
+        - 10.193.1.61
+        labels:
+          jobs: "solaris_exporter,blackbox-ssh"
+          owner: "root"
+          os: "solaris"
+          hostname: "sol-host01"
+          noAlarmOn: ""  
+      - targets:
+        - 10.193.1.63
+        labels:
+          jobs: "solaris_exporter,blackbox-ssh"
+          owner: "root"
+          os: "solaris"
+          hostname: "sol-host02"
+          noAlarmOn: ""
